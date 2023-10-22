@@ -2,7 +2,6 @@ package cibertec.edu.pe.appcinecibertec.Model.bd;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import org.springframework.data.annotation.Id;
 
 @Data
 @Entity

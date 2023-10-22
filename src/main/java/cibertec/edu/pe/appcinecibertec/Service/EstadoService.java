@@ -17,7 +17,7 @@ public class EstadoService {
     }
 
     public boolean registrarEstado(Estado estado){
-        return estadoRepository.save(estado) !=null;
+        return estadoRepository.save(estado)!=null;
     }
 
     public void eliminarEstado(Integer idestado){
