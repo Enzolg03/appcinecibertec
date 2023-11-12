@@ -36,7 +36,7 @@ public class EstadoService {
     }
 
     public ResultadoResponse eliminarEstado(Integer idestado){
-        String mensaje = "Estado eliminar";
+        String mensaje = "Estado eliminado";
         boolean respuesta = true;
         try{
             estadoRepository.deleteById(idestado);

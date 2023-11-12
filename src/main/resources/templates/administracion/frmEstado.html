@@ -2,7 +2,6 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head th:replace="~{layout::head}">
 
-
 </head>
 <body>
 <script th:src="@{/js/web/administracion/frmestado.js}" type="text/javascript"></script>
@@ -76,5 +75,30 @@
     </div>
 </div>
 
+<!-- Modal eliminar-->
+<div class="modal fade" id="modaleliminarestado" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5">Mantenimiento Estado</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label id="lblmensajeeliminar">Eliminar Estado</label>
+                    <input type="hidden" id="hiddenestadoeliminar" value="0">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    <i class="bi bi-x-circle"></i>Cerrar
+                </button>
+                <button id="btneliminar" type="button" class="btn btn-primary">
+                    <i class="bi bi-floppy"></i>Eliminar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

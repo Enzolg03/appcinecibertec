@@ -61,5 +61,26 @@ function listarEstados(){
 }
 
 $(document).on("click",".btneliminar", function(){
-    $("#modalestado").modal("show");
+    $("#lblmensajeeliminar").text("¿Está seguro de eliminar el estado " +
+    $(this).attr("data-descestado")+"?");
+    $("#hiddenestadoeliminar").val($(this).attr("data-idestado"));
+    $("#modaleliminarestado").modal("show");
 });
+
+$(document).on("click","#btneliminar", function(){
+     $.ajax({
+        type: "DELETE",
+        contentType: "application/json",
+        url: "/administracion/estado/eliminar",
+        data: JSON.stringify({
+            idestado: $("#hiddenestadoeliminar").val(),
+        }),
+        success: function(resultado){
+            if(resultado.respuesta){
+                listarEstados();
+            }
+            alert(resultado.mensaje);
+            $("#modaleliminarestado").modal("hide")
+        }
+     })
+ });
