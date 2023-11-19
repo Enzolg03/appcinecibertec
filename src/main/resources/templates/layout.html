@@ -22,15 +22,16 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Adminstración
+                        Mantenimientos
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" th:href="@{/administracion/estado/frmestado}">Estado</a></li>
-                        <!--<li><a class="dropdown-item" th:href="">Kardex</a></li>
-                        <li><a class="dropdown-item" th:href="">Registro de Compras</a></li>
-                        <li><a class="dropdown-item" th:href="">Guias de Remisión</a></li>-->
+                        <li><a class="dropdown-item" th:href="@{/administracion/estado/frmEstado}">Estado</a></li>
+                        <li><a class="dropdown-item" th:href="@{/administracion/sala/frmSala}">Sala</a></li>
+                        <li><a class="dropdown-item" href="#">Kardex</a></li>
+                        <li><a class="dropdown-item" th:href="@{/almacen/compras/listar}">Registro de Compras</a></li>
+                        <li><a class="dropdown-item" th:href="@{/almacen/guiaremision/obtenerguia}">Guias de Remisión</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" th:href="@{/administracion/sala/frmsala}">Sala</a></li>
+                        <li><a class="dropdown-item" href="#">Reportes</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">

@@ -73,14 +73,14 @@ $(document).on("click","#btneliminar", function(){
         contentType: "application/json",
         url: "/administracion/estado/eliminar",
         data: JSON.stringify({
-            idestado: $("#hiddenestadoeliminar").val(),
+            idestado: $("#hiddenestadoeliminar").val()
         }),
         success: function(resultado){
             if(resultado.respuesta){
                 listarEstados();
             }
             alert(resultado.mensaje);
-            $("#modaleliminarestado").modal("hide")
+            $("#modaleliminarestado").modal("hide");
         }
-     })
+     });
  });

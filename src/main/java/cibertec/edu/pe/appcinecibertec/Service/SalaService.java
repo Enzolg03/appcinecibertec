@@ -18,12 +18,12 @@ public class SalaService {
     public List<Sala> listarSalas(){
         return salaRepository.findAll();
     }
-    public ResultadoResponse registrarActualizarSala(SalaDto salaDto){
-        String mensaje = "Sala NO registrar";
+    public ResultadoResponse guardarActualizarSala(SalaDto salaDto){
+        String mensaje = "Sala registrada correctamente";
         boolean respuesta = true;
         try{
             Sala nuevaSala = new Sala();
-            if(salaDto.getIdestado() > 0){
+            if(salaDto.getIdsala() > 0){
                 nuevaSala.setIdsala(salaDto.getIdsala());
             }
             nuevaSala.setDescsala(salaDto.getDescsala());

@@ -17,21 +17,21 @@ import java.util.List;
 public class SalaController {
     private SalaService salaService;
 
-    @GetMapping("/frmsala")
+    @GetMapping("/frmSala")
     public String frmMantSala(Model model){
         model.addAttribute("listasalas", salaService.listarSalas());
-        return "administracion/frmsala";
+        return "administracion/frmSala";
+    }
+    @PostMapping("/registrar")
+    @ResponseBody
+    public ResultadoResponse registrarSala(
+            @RequestBody SalaDto salaDto
+    ){
+        return salaService.guardarActualizarSala(salaDto);
     }
     @GetMapping("/listar")
     @ResponseBody
     public List<Sala> listarSala(){
         return salaService.listarSalas();
-    }
-    @PostMapping("/registrar")
-    @ResponseBody
-    public ResultadoResponse registrarSala(
-            @RequestBody SalaDto objSala
-    ){
-        return salaService.registrarActualizarSala(objSala);
     }
 }

@@ -16,7 +16,7 @@ import java.util.List;
 public class EstadoController {
 
     private EstadoService estadoService;
-    @GetMapping("/frmestado")
+    @GetMapping("/frmEstado")
     public String index(Model model){
         model.addAttribute("listaestados", estadoService.listadoEstados());
         return "administracion/frmEstado";
