@@ -19,7 +19,6 @@ $(document).on("click","#btnnuevo", function(){
 });
 $(document).on("click",".btnactualizar", function(){
     $("#modalsala").modal("show");
-
     $("#txtdescripcion").val($(this).attr("data-descsala"));
     $("#txtasientos").val($(this).attr("data-asientos"));
     $("#hddisala").val($(this).attr("data-idsala"));

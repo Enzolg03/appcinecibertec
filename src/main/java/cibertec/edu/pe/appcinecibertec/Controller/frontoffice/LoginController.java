@@ -26,7 +26,7 @@ public class LoginController {
     @PostMapping("/guardarusuario")
     public String guardarUsuario(@ModelAttribute Usuario usuario){
         usuarioService.saveUser(usuario);
-        return "frontoffice/auth/login";
+        return "redirect:/auth/login";
     }
     @GetMapping("/login-success")
     public String loginsuccess(){
